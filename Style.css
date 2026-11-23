@@ -24,3 +24,12 @@ h1{margin:4px 0}.sub{color:var(--mut);margin:0 0 8px}
 button{background:var(--ac);color:#2b2118;border:0;border-radius:8px;padding:9px 12px;font:inherit;cursor:pointer}
 #log{max-height:170px;overflow-y:auto;font-size:13px;color:var(--mut);border-top:1px solid var(--bd);padding-top:6px}
 details{margin-top:10px;font-size:14px}li{margin:3px 0}
+
+/* Feedback visual nos botões */
+button{transition:transform .12s ease,filter .12s ease}
+button:hover{filter:brightness(1.1);transform:translateY(-1px)}
+button:focus-visible{outline:3px solid var(--fg);outline-offset:2px}
+
+/* Feedback visual nas cartas */
+.c{transition:transform .15s ease}
+.c:hover:not(.dead){transform:translateY(-2px)}
