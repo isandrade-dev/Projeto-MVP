@@ -2,18 +2,28 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Macacada</title>
-    <link rel="stylesheet" href="CSS/style.css">
-    <script src="JS/interaçoes.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
 <main>
     <h1>Macacada 🐒🍌</h1>
     <p class="sub">Blefe, desafie e fique com as últimas bananas. Seja o último macaco com influência.</p>
-    <div id="players"></div>
-    <div id="panel"><div id="msg"></div><div id="btns"></div></div>
-    <div id="log"></div>
+
+    <div class="layout">
+        <section class="board">
+            <div id="players"></div>
+            <div id="panel"><div id="msg"></div><div id="btns"></div></div>
+        </section>
+
+        <aside id="chat" aria-label="Chat do jogo">
+            <div class="chat-head">💬 Chat da selva <small>tudo o que acontece aparece aqui</small></div>
+            <div id="log" role="log" aria-live="polite"></div>
+        </aside>
+    </div>
+
     <details><summary>Regras e personagens</summary>
     <ul>
         <li>🦍 <b>Gorila Rei</b> (Duque): Taxar +3 🍌. Bloqueia Ajuda externa.</li>
@@ -27,4 +37,3 @@
 </main>
 </body>
 </html>
-
