@@ -1,77 +1,38 @@
-# 🐒 Macacada
+# Macacada 🐒🍌
 
-Um jogo de estratégia, blefe e dedução inspirado na mecânica de Coup. Utilize personagens, acumule bananas, desafie seus adversários e tente ser o último macaco com influência!
+Jogo de cartas e blefe com tema de selva, feito com HTML, CSS e JavaScript. Você joga contra dois bots (Zeca e Mona). Vence o último macaco que ainda tiver cartas.
 
-## 🎮 Sobre o projeto
+## Como jogar
 
-**Macacada** é um jogo de cartas desenvolvido com HTML, CSS e JavaScript, no qual o jogador enfrenta dois adversários controlados pelo computador.
+Cada jogador começa com 2 cartas e 2 🍌. Na sua vez, escolha uma ação:
 
-O objetivo é eliminar a influência dos oponentes por meio de estratégias, blefes e desafios, administrando suas bananas para executar ações e conquistar a vitória.
+| Ação | Custo | Efeito | Personagem |
+|---|---|---|---|
+| Renda | 0 | +1 🍌 | nenhum |
+| Ajuda externa | 0 | +2 🍌 | nenhum (o Gorila Rei bloqueia) |
+| Taxar | 0 | +3 🍌 | 🦍 Gorila Rei |
+| Assassinar | 3 🍌 | o alvo perde uma carta | 🐒 Macaco Ninja (a Mico Condessa bloqueia) |
+| Extorquir | 0 | rouba 2 🍌 do alvo | 🐵 Macaco Capitão (Capitão e Embaixador bloqueiam) |
+| Trocar cartas | 0 | troca cartas com o baralho | 🦧 Orangotango Embaixador |
+| Golpe | 7 🍌 | o alvo perde uma carta, não pode ser bloqueado | nenhum |
 
-## 🚀 Funcionalidades
+Com 10 🍌 ou mais, o Golpe é obrigatório.
 
-- Sistema de partidas com três jogadores: um jogador humano e dois adversários controlados por IA.
-- Distribuição aleatória de personagens.
-- Sistema de moedas (🍌 bananas) para realizar ações.
-- Mecânica de blefe e desafios.
-- Sistema de bloqueios de ações.
-- Eliminação de personagens e jogadores.
-- Registro de acontecimentos durante a partida.
-- Possibilidade de escolher cartas e ações.
-- Sistema de embaralhamento e troca de cartas.
-- Opção de iniciar uma nova partida após o término.
+Qualquer ação de personagem ou bloqueio pode ser desafiado. Quem erra o desafio perde uma carta. Quem acerta embaralha a carta mostrada e compra outra.
 
-## 🃏 Personagens
+## Chat do jogo 💬
 
-| Personagem | Habilidade |
-|---|---|
-| 🦍 Gorila Rei | Taxar e receber 3 bananas. Bloqueia ajuda externa. |
-| 🐒 Macaco Ninja | Paga 3 bananas para eliminar uma carta do adversário. |
-| 🐵 Macaco Capitão | Extorquir e roubar até 2 bananas. |
-| 🦧 Orangotango Embaixador | Trocar cartas e bloquear extorsão. |
-| 🙈 Mico Condessa | Bloquear assassinato. |
+Tudo o que acontece na partida aparece no chat ao lado do tabuleiro (no celular, ele fica abaixo do painel).
 
-## 🍌 Ações disponíveis
+- Cada ação, desafio, bloqueio, perda de carta e ganho de banana vira um balão de conversa, com o avatar de quem fez.
+- As mensagens dos bots ficam à esquerda e as suas ficam à direita.
+- A lateral do balão muda de cor conforme o tipo de evento:
+  - amarelo: ação
+  - vermelho: desafio
+  - azul: bloqueio
+  - roxo: carta perdida
+  - verde: resultado
+- Cada turno começa com um separador "Vez de ...", e eliminações e fim de jogo aparecem em destaque.
+- O chat rola sozinho para a mensagem mais nova e é limpo quando uma nova partida começa.
 
-- **Renda:** recebe 1 banana.
-- **Ajuda externa:** recebe 2 bananas.
-- **Golpe:** paga 7 bananas para eliminar uma carta de outro jogador.
-- **Taxar:** recebe 3 bananas utilizando o Gorila Rei.
-- **Assassinar:** paga 3 bananas para eliminar uma carta utilizando o Macaco Ninja.
-- **Extorquir:** rouba até 2 bananas utilizando o Macaco Capitão.
-- **Trocar cartas:** utiliza o Orangotango Embaixador para renovar suas cartas.
-
-Quando um jogador possui 10 ou mais bananas, é obrigado a realizar um golpe.
-
-## 🛠️ Tecnologias utilizadas
-
-- HTML5
-- CSS3
-- JavaScript
-
-## 📂 Estrutura do projeto
-
-```text
-Macacada/
-│
-├── index.html
-├── style.css
-└── script.js
-```
-
-## ▶️ Como executar
-
-1. Faça o download ou clone este repositório.
-2. Abra a pasta do projeto.
-3. Execute o arquivo `index.html` no navegador.
-4. Comece a jogar!
-
-## 🎯 Objetivo
-
-Ser o último jogador com influência, utilizando estratégia, inteligência e blefe para derrotar seus adversários.
-
----
-
-Desenvolvido como projeto de prática em desenvolvimento web, explorando lógica de programação, manipulação do DOM, funções assíncronas e estruturas de dados com JavaScript.
-
-🐒🍌 **Boa sorte na Macacada!**
+Outras ajudas visuais: o jogador da vez fica com a borda destacada e a etiqueta "na vez", e o painel de decisão pulsa quando está esperando você.
